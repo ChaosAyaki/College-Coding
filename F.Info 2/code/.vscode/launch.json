@@ -2,20 +2,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Ejecutar C++",
-            "type": "cppdbg",
+            "name": "Ejecutar EXE",
+            "type": "cppdbg",  // Usa el tipo adecuado (en este caso cppdbg para C++)
             "request": "launch",
-            "program": "${workspaceFolder}/ejecutables/${fileBasenameNoExtension}.exe",
+            "program": "${workspaceFolder}/ejecutables/archivo.exe",  // Ruta del ejecutable
             "args": [],
+            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",  // Cambia si usas otro debugger
             "setupCommands": [
                 {
-                    "description": "Habilitar la salida de consola",
+                    "description": "Habilitar el seguimiento de la variable de depuración",
                     "text": "-enable-pretty-printing",
-                    "ignoreFailures": false
+                    "ignoreFailures": true
                 }
-            ]
+            ],
+            "externalConsole": true
         }
     ]
 }

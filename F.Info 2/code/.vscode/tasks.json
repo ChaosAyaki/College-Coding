@@ -2,27 +2,20 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Crear carpeta ejecutables",
+            "label": "compilar",
             "type": "shell",
-            "command": "mkdir",
-            "args": ["-p", "${workspaceFolder}/ejecutables"],
-            "problemMatcher": []
-        },
-        {
-            "label": "Compilar C++",
-            "type": "shell",
-            "command": "g++",
+            "command": "g++",  // Usamos g++ para compilar
             "args": [
-                "${file}",
-                "-o",
-                "${workspaceFolder}/ejecutables/${fileBasenameNoExtension}.exe"
+                "archivo.cpp",  // Nombre del archivo fuente
+                "-o", 
+                "${workspaceFolder}/ejecutables/archivo.exe"  // Ruta de salida
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "problemMatcher": ["$gcc"],
-            "dependsOn": "Crear carpeta ejecutables"
+            "detail": "Compilando archivo.cpp"
         }
     ]
 }
