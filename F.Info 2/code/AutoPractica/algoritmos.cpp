@@ -18,9 +18,8 @@ int main(){
     cout << "Marsoni la tiene grande. " << endl;
     cout << "Le mide: " << a << endl;
 
-    resultado = to_string(a) + algo;
-
-
-
+    resultado = to_string(a) + " " + algo;
+    cout << resultado; //Para probar la funcion to_string 
+    
     return 0;
 }

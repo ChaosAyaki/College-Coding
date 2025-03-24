@@ -2,6 +2,13 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Crear carpeta ejecutables",
+            "type": "shell",
+            "command": "mkdir",
+            "args": ["-p", "${workspaceFolder}/ejecutables"],
+            "problemMatcher": []
+        },
+        {
             "label": "Compilar C++",
             "type": "shell",
             "command": "g++",
@@ -15,7 +22,7 @@
                 "isDefault": true
             },
             "problemMatcher": ["$gcc"],
-            "detail": "Compila el archivo en la carpeta 'ejecutables'"
+            "dependsOn": "Crear carpeta ejecutables"
         }
     ]
 }
