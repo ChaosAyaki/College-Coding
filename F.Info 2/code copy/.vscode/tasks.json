@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compilar",
+            "type": "shell",
+            "command": "g++",  // Usamos g++ para compilar
+            "args": [
+                "archivo.cpp",  // Nombre del archivo fuente
+                "-o", 
+                "${workspaceFolder}/ejecutables/archivo.exe"  // Ruta de salida
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compilando archivo.cpp"
+        }
+    ]
+}
