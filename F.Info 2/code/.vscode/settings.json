@@ -3,5 +3,6 @@
     "files.associations": {
         "iostream": "cpp",
         "ostream": "cpp"
-    }
+    },
+     "terminal.integrated.cwd": "${workspaceFolder}/ejecutables"
 }
