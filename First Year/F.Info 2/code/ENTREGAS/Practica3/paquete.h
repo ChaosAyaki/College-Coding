@@ -1,4 +1,5 @@
 #pragma once
+#include"albaran.h"
 #include<iostream>
 #include<string>
 
@@ -15,4 +16,6 @@ class Paquete {
 		int getCodigoDestino();
 		bool setCodigoDestino(int codigoDestino);
 		virtual string toString();
+		Albaran getAlbaran();
+		void setAlbaran(Albaran albaran);
 };

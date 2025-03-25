@@ -1,7 +1,7 @@
 #include"albaran.h"
 
 Albaran::Albaran(){
-    this->contenido = 0;
+    this->contenido = "";
     this->cantidad = 0;
 }
 
@@ -16,4 +16,9 @@ string Albaran::getContenido(){
 
 int Albaran::getCantidad(){
     return cantidad;
+}
+
+string Albaran::toString(){
+    string s = contenido;
+    return contenido;
 }

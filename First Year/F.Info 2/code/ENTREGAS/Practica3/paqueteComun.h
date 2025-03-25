@@ -1,3 +1,4 @@
+#pragma once
 #include "paquete.h"
 
 class PaqueteComun : public Paquete {

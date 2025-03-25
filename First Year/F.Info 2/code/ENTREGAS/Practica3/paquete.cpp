@@ -1,4 +1,5 @@
 #include "paquete.h"
+#include "albaran.h"
 
 Paquete::Paquete(){
 	this->codigoDestino = 0;
@@ -25,6 +26,6 @@ bool Paquete::setCodigoDestino(int codigoDestino){
 
 string Paquete::toString(){
 	string s;
-	s = "La empresa se llama " + to_string(nombre_empresa) + ", el id del paquete es " to_string(id) + " y el codigo de destino es " + to_string(codigoDestino);
+	s = "La empresa se llama " to_string(nombre_empresa) + ", el id del paquete es " to_string(id) + " y el codigo de destino es " + to_string(codigoDestino);
 	return s;
 }
