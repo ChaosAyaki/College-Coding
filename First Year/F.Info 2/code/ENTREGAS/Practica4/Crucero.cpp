@@ -4,7 +4,7 @@ Crucero::Crucero() : Barco(), CentroTuristico(){
 	this->destino = "";
 }
 
-Crucero::Crucero(const Crucero& otro) : Barco(string nombre), CentroTuristico(string nombre, int pasajeros){
+Crucero::Crucero(const Crucero& otro) : Barco(otro.nombre), CentroTuristico(otro.nombre, otro.getPasajeros()){
 	this->destino = otro.destino;
 }
 
@@ -22,6 +22,6 @@ void Crucero::setDestino(string destino){
 }
 
 string Crucero::toString(){
-	string s = "El Crucero se llama " + this->nombre + "tiene una capacidad de " + to_string(this->capacidad) + " con un total de " + to_string(this->pasajeros) " pasajeros y con destino " + destino;
+	string s = "El Crucero se llama " + nombre + "tiene una capacidad de " + to_string(this->capacidad) + " con un total de " + to_string(this->getPasajeros()) " pasajeros y con destino " + destino;
 	return s;
 }

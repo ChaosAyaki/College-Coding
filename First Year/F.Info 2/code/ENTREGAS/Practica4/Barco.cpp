@@ -4,7 +4,7 @@ Barco::Barco() : Vehiculo(){
 	this->capacidad = 0.0;
 }
 
-Barco::Barco(string nombre, float capacidad) : Vehiculo(string nombre){
+Barco::Barco(string nombre, float capacidad) : Vehiculo(nombre){
 	this->capacidad = capacidad;
 }
 
@@ -17,7 +17,7 @@ void Barco::setCapacidad(float capacidad){
 }
 
 string Barco::toString(){
-	string = s;
+	string s;
 	s = "El barco tiene una capacidad de " + to_string(capacidad);
 	return s;
 }

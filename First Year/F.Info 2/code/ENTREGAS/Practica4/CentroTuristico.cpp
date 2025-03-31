@@ -24,5 +24,5 @@ void CentroTuristico::setPasajeros(int pasajeros){
 
 string CentroTuristico::toString(){
 	string s = "El centro turistico se llama " + nombre +" y tiene un total de " + to_string(pasajeros);
-	return = s;
+	return s;
 }
