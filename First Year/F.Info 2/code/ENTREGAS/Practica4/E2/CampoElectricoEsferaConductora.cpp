@@ -9,11 +9,24 @@ CampoElectricoEsferaConductora::CampoElectricoEsferaConductora(float radio_esfer
 }
 
 float CampoElectricoEsferaConductora::calcularIntensidad(float* posicion){
-    //Implementar 
+    float distancia = dist(posicion, this->posicion);
+    if(distancia < radio_esfera){
+        return 0;
+    } else {
+        return (carga/(distancia*distancia)); 
+    }
 }
 
 float* CampoEletricoEsferaConductora::calcularDireccion(float* posicion){
-    //Implementar
+    float* direccion = new float[2];
+    float distancia = dist(posicion, this->posicion);
+    if(distancia < radio_esfera){
+        direccion[0] = 0;
+        direccion[1] = 1;
+    } else {
+        direccion[0] = (posicion[0] - this->posicion) / distancia;
+        direccion[1] = (posicion[1] - this->posicion) / distancia;
+    }
 }
 
 virtual string CampoElectricoEsferaConductora::toString(){
@@ -22,3 +35,4 @@ virtual string CampoElectricoEsferaConductora::toString(){
 }
 
 virtual ~CampoElectricoEsferaConductora();
+

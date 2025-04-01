@@ -12,11 +12,26 @@ CampoElectrico::CampoElectrico(float carga, float* posicion, string nombre) : Ca
     this->posicion[1] = posicion[1];
 
 float CampoEletrico::calcularIntensidad(float* posicion){
-    //Implementar
+    float distancia;
+    distancia = dist(posicion,this->posicion);  
+    if(distancia == 0){
+        return 0;
+    } else {
+        return (carga/(distancia*distancia));
+    }
 }
 
 float CampoEletrico::calcularDireccion(float* posicion){
-    //Implementar
+    float* direccion = new float[2];
+    float distancia = dist(posicion, this->posicion);
+    if(distancia == 0){
+        direccion(0) = 0;
+        direccion(1) = 1;
+    } else {
+        direccion[0] = (posicion[0] - this->posicion[0]) / distancia;
+        direccion[1] = (posicion[1] - this->posicion[1]) / distancia;
+    }
+    return direccion;
 }
 
 float CampoElectrico::setCarga(float carga){
