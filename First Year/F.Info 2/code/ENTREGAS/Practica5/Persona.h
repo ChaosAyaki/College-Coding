@@ -14,9 +14,9 @@ class Persona {
 		Persona(const Persona& otra);
 		bool const operator==(const Persona& otra);
 		friend ostream& operator<<(ostream& os, Persona& persona);
-		string setNombre(string nuevo_nombe);
+		void setNombre(string nuevo_nombe);
 		string getNombre();
-		string setDNI(string nuevo_DNI);
+		void setDNI(string nuevo_DNI);
 		string getDNI();
 		virtual string toString();
 };

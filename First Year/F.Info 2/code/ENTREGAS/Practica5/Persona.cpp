@@ -27,7 +27,7 @@ ostream& operator<<(ostream& os, Persona& persona){
 	return os << "Nombre: " << persona.nombre << ", DNI: " << persona.DNI;
 }
 
-string Persona::setNombre(string nuevo_nombre){
+void Persona::setNombre(string nuevo_nombre){
 	nombre = nuevo_nombre;
 }
 
@@ -35,7 +35,7 @@ string Persona::getNombre(){
 	return nombre;
 }
 
-string Persona::setDNI(string nuevo_DNI){
+void Persona::setDNI(string nuevo_DNI){
 	DNI = nuevo_DNI;
 }
 
@@ -43,7 +43,7 @@ string Persona::getDNI(){
 	return DNI;
 }
 
-string Persona::toString(){
+virtual string Persona::toString(){
 	string s = "El nombre es " + nombre + " y el DNI es " + DNI;
 	return s;
 }
