@@ -26,14 +26,14 @@ ostream& operator<<(ostream& os, Estudiante& estudiante){
     os << setw(20) << left << estudiante.nombre << " ";
     os << setprecision(2) << fixed << setw(10) << right << estudiante.puntaje_acumulado;
 
-    // if (&os == &cout){
-    //     os << setw(12) << right << estudiante.DNI << " ";
-    //     os << setprecision(1) << fixed << setw(10) << right << estudiante.puntaje_acumulado;
-    // }
-    // else if (&os == &datos_estudiantes){
-    //     os << setw(20) << left << estudiante.nombre << " ";
-    //     os << setw(12) << right << estudiante.DNI << " ";
-    // }
+    if (&os == &cout){
+        os << setw(12) << right << estudiante.DNI << " ";
+        os << setprecision(1) << fixed << setw(10) << right << estudiante.puntaje_acumulado;
+    }
+    else if (&os == &datos_estudiantes){
+        os << setw(20) << left << estudiante.nombre << " ";
+        os << setw(12) << right << estudiante.DNI << " ";
+    }
     return os;
 }
 
@@ -265,17 +265,17 @@ int main()
 
     case 14:{
         if (datos_de_lectura){
-            // Estudiante e;
-            // datos_de_lectura >> e;
-            // cout << e << endl;
-            // datos_de_lectura >> e;
-            // cout << e << endl;
-            // datos_de_lectura >> e;
-            // cout << e << endl;
-            // datos_de_lectura >> e;
-            // cout << e << endl;
-            // datos_de_lectura >> e;
-            // cout << e << endl;
+            Estudiante e;
+            datos_de_lectura >> e;
+            cout << e << endl;
+            datos_de_lectura >> e;
+            cout << e << endl;
+            datos_de_lectura >> e;
+            cout << e << endl;
+            datos_de_lectura >> e;
+            cout << e << endl;
+            datos_de_lectura >> e;
+            cout << e << endl;
 
             list<Estudiante> estudiantes;
             Estudiante est;
