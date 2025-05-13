@@ -7,6 +7,7 @@
 using namespace std;
 
 int main(){
+	
 	int opcion;
 	
 	do{
@@ -29,15 +30,68 @@ int main(){
 			for(int i = 0; i < 5; i++){
 				cout << asignaturas[i].toString() << endl;
 			}
+			
+			break;
 		};
 		
 		case (2):{
-			//array<Asignatura, 5> asig1, asig2 ,asig3;
-			return 0;	
+			
+			array<Asignatura, 5> asig1 = {{ //Se puede poner solo una llave en los arrays pero por si acaso ponemos dobles aunque este bien
+                {"Matematicas I", 1, 3},
+                {"Fisica I", 1, 4},
+                {"Programacion I", 1, 2},
+                {"Ingles I", 1, 1},
+                {"Algebra", 1, 3}
+            }};
+
+            array<Asignatura, 5> asig2 = {{
+                {"Matematicas II", 2, 4},
+                {"Fisica II", 2, 5},
+                {"Programacion II", 2, 3},
+                {"Ingles II", 2, 2},
+                {"Bases de Datos", 2, 4}
+            }};
+
+            array<Asignatura, 5> asig3 = {{
+                {"Sistemas Operativos", 3, 4},
+                {"Redes", 3, 3},
+                {"Estructuras de Datos", 3, 4},
+                {"POO", 3, 3},
+                {"Electronica", 3, 2}
+            }};
+
+            array<array<Asignatura, 5>, 3> contenedorGeneral = { asig1, asig2, asig3 };
+
+        	for (int i = 0; i < 5; i++) {
+                contenedorGeneral[1][i].dificultad_esperada = 10;  // Cualquier número
+            }
+
+            cout << "\nAsignaturas del segundo contenedor con dificultad modificada: " << endl;
+            for (const auto& asignatura : contenedorGeneral[1]) {
+                cout << asignatura.toString() << endl;
+            }
+			
+			break;	
 		};
 		
 		case (3): {
-			return 0;
+			
+			stack<Asignatura> pilaAsignaturas;
+
+   			pilaAsignaturas.push(Asignatura("Fundamentos de Programación I", 1, 3));
+   			pilaAsignaturas.push(Asignatura("Fundamentos de Programación II", 2, 4));
+   			pilaAsignaturas.push(Asignatura("Estructuras de Datos", 3, 4));
+   			pilaAsignaturas.push(Asignatura("Algoritmos", 4, 5));
+
+    		// Mostrar y vaciar la pila (LIFO)
+    		cout << "Asignaturas en orden de eliminacion (ultima a primera):" << endl;
+    		while (!pilaAsignaturas.empty()) {
+    		    Asignatura a = pilaAsignaturas.top();
+    		    a.mostrar(); //Para mostrar los cambios
+    		    pilaAsignaturas.pop();
+    		}	
+			
+			break;
 		};
 		
 		default:
