@@ -37,27 +37,27 @@ int main(){
 		case (2):{
 			
 			array<Asignatura, 5> asig1 = {{ //Se puede poner solo una llave en los arrays pero por si acaso ponemos dobles aunque este bien
-                {"Matematicas I", 1, 3},
-                {"Fisica I", 1, 4},
-                {"Programacion I", 1, 2},
-                {"Ingles I", 1, 1},
-                {"Algebra", 1, 3}
+                {"Matematicas I", 8.0, 1},
+                {"Fisica I", 9.0, 4},
+                {"Programacion I", 7.15, 1},
+                {"Ingles I", 4.0, 1},
+                {"Algebra", 6.26, 1}
             }};
 
             array<Asignatura, 5> asig2 = {{
-                {"Matematicas II", 2, 4},
-                {"Fisica II", 2, 5},
-                {"Programacion II", 2, 3},
+                {"Matematicas II", 2, 2},
+                {"Fisica II", 2, 2},
+                {"Programacion II", 2, 2},
                 {"Ingles II", 2, 2},
-                {"Bases de Datos", 2, 4}
+                {"Bases de Datos", 2, 2}
             }};
 
             array<Asignatura, 5> asig3 = {{
-                {"Sistemas Operativos", 3, 4},
+                {"Sistemas Operativos", 3, 3},
                 {"Redes", 3, 3},
-                {"Estructuras de Datos", 3, 4},
+                {"Estructuras de Datos", 3, 3},
                 {"POO", 3, 3},
-                {"Electronica", 3, 2}
+                {"Electronica", 3, 3}
             }};
 
             array<array<Asignatura, 5>, 3> contenedorGeneral = { asig1, asig2, asig3 };
