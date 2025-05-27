@@ -10,7 +10,7 @@ private:
 public:
     Tarjeta();
     Tarjeta(int ID, int nivel_acceso);
-    Tarjeta(const Tarjeta &totra);
+    Tarjeta(const Tarjeta &otra);
 
     int getID();
     int getNivelAcceso();
